@@ -1,0 +1,398 @@
+/* =====================================================
+   SUVODH SEVA PORTAL
+   Professional Responsive Design
+   ===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, "Noto Sans Devanagari", sans-serif;
+    background: #f1f5f9;
+    color: #1e293b;
+    line-height: 1.6;
+}
+
+/* =====================================================
+   HEADER
+   ===================================================== */
+
+.portal-header {
+    background: linear-gradient(135deg, #0f172a, #1d4ed8);
+    color: white;
+    text-align: center;
+    padding: 28px 15px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.15);
+}
+
+.portal-header h1 {
+    font-size: 30px;
+    font-weight: 800;
+    letter-spacing: .3px;
+}
+
+.portal-header p {
+    margin-top: 6px;
+    font-size: 15px;
+    opacity: .9;
+}
+
+/* =====================================================
+   MAIN CONTAINER
+   ===================================================== */
+
+.container,
+.service-page,
+.other-services {
+    width: 92%;
+    max-width: 1100px;
+    margin: 30px auto;
+}
+
+/* =====================================================
+   PAGE TITLE
+   ===================================================== */
+
+.page-title,
+.section-title {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.page-title h2,
+.section-title h2,
+.other-services > h2 {
+    color: #0f172a;
+    font-size: 25px;
+    margin-bottom: 7px;
+}
+
+.page-title p,
+.other-services > p {
+    color: #64748b;
+    font-size: 14px;
+}
+
+/* =====================================================
+   SERVICE GRID
+   ===================================================== */
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+/* =====================================================
+   SERVICE CARD
+   ===================================================== */
+
+.service-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 150px;
+    padding: 22px 16px;
+
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+
+    text-decoration: none;
+    color: #1e293b;
+
+    box-shadow: 0 5px 18px rgba(15,23,42,0.07);
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease,
+        border-color .25s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    border-color: #3b82f6;
+    box-shadow: 0 12px 28px rgba(15,23,42,0.13);
+}
+
+.service-card span,
+.service-icon {
+    font-size: 36px;
+    margin-bottom: 9px;
+}
+
+.service-card b,
+.service-card h3 {
+    color: #0f172a;
+    font-size: 17px;
+    margin-bottom: 5px;
+}
+
+.service-card small,
+.service-card p {
+    color: #64748b;
+    font-size: 13px;
+    text-align: center;
+}
+
+/* =====================================================
+   SERVICE BUTTON
+   ===================================================== */
+
+.service-btn {
+    display: inline-block;
+    margin-top: 13px;
+
+    padding: 10px 20px;
+
+    background: #2563eb;
+    color: white !important;
+
+    border: none;
+    border-radius: 9px;
+
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: .25s ease;
+}
+
+.service-btn:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+/* =====================================================
+   BACK BUTTON
+   ===================================================== */
+
+.back-btn,
+.back-button {
+    display: inline-block;
+
+    margin-bottom: 20px;
+    padding: 10px 17px;
+
+    background: white;
+    color: #1d4ed8;
+
+    border: 1px solid #dbeafe;
+    border-radius: 9px;
+
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+
+    box-shadow: 0 3px 10px rgba(15,23,42,.06);
+}
+
+.back-btn:hover,
+.back-button:hover {
+    background: #eff6ff;
+}
+
+/* =====================================================
+   GENERAL BUTTON
+   ===================================================== */
+
+button {
+    font-family: inherit;
+}
+
+/* =====================================================
+   POPUP / SERVICE BOX
+   ===================================================== */
+
+.service-box,
+.message-box {
+    display: none;
+
+    position: fixed;
+    inset: 0;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    background: rgba(15,23,42,.65);
+
+    z-index: 9999;
+}
+
+.service-content {
+    position: relative;
+
+    width: 100%;
+    max-width: 430px;
+
+    padding: 30px;
+
+    background: white;
+    border-radius: 18px;
+
+    text-align: center;
+
+    box-shadow: 0 20px 50px rgba(0,0,0,.25);
+}
+
+.service-content h2 {
+    color: #0f172a;
+    margin-bottom: 10px;
+}
+
+.service-content p {
+    color: #64748b;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+
+    width: 35px;
+    height: 35px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #fee2e2;
+    color: #dc2626;
+
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.back-service {
+    margin-top: 18px;
+
+    padding: 10px 20px;
+
+    border: none;
+    border-radius: 9px;
+
+    background: #2563eb;
+    color: white;
+
+    cursor: pointer;
+    font-weight: 700;
+}
+
+/* =====================================================
+   FOOTER
+   ===================================================== */
+
+.portal-footer,
+footer {
+    margin-top: 45px;
+    padding: 32px 18px 18px;
+
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+
+    color: #cbd5e1;
+
+    text-align: center;
+
+    border-top: 4px solid #2563eb;
+}
+
+.portal-footer p,
+footer p {
+    max-width: 850px;
+    margin: 9px auto;
+
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.portal-footer a,
+footer a {
+    color: #60a5fa;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.portal-footer a:hover,
+footer a:hover {
+    text-decoration: underline;
+}
+
+.portal-footer hr,
+footer hr {
+    width: 90%;
+    max-width: 850px;
+
+    margin: 22px auto;
+
+    border: 0;
+    border-top: 1px solid rgba(255,255,255,.15);
+}
+
+/* =====================================================
+   MOBILE
+   ===================================================== */
+
+@media (max-width: 800px) {
+
+    .service-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .portal-header h1 {
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 520px) {
+
+    .container,
+    .service-page,
+    .other-services {
+        width: 94%;
+        margin: 22px auto;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .service-card {
+        min-height: 135px;
+    }
+
+    .page-title h2,
+    .section-title h2,
+    .other-services > h2 {
+        font-size: 21px;
+    }
+
+    .portal-header {
+        padding: 23px 12px;
+    }
+
+    .portal-header h1 {
+        font-size: 22px;
+    }
+
+    .portal-header p {
+        font-size: 13px;
+    }
+
+    .service-icon,
+    .service-card span {
+        font-size: 32px;
+    }
+}
