@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>आवेदन स्थिति - Suvodh Seva Portal</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div>
+            <h1>🔎 आवेदन स्थिति</h1>
+            <p>Suvodh Seva Portal</p>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="welcome">
+            <h2>आवेदन की स्थिति देखें</h2>
+            <p>
+                अपने आवेदन की स्थिति जानने के लिए नीचे विवरण दर्ज करें।
+            </p>
+        </section>
+
+        <section class="welcome">
+
+            <h2>🔍 आवेदन खोजें</h2>
+
+            <select
+                id="serviceType"
+                style="width:100%; padding:14px; margin-top:15px;
+                border:1px solid #ddd; border-radius:10px;
+                font-size:16px;"
+            >
+
+                <option value="">सेवा चुनें</option>
+
+                <option value="aadhaar">
+                    🪪 आधार आवेदन
+                </option>
+
+                <option value="pan">
+                    💳 PAN Card
+                </option>
+
+                <option value="certificate">
+                    📜 प्रमाण पत्र
+                </option>
+
+                <option value="job">
+                    💼 नौकरी / रोजगार
+                </option>
+
+                <option value="education">
+                    🎓 शिक्षा / प्रवेश
+                </option>
+
+                <option value="government">
+                    🏛️ सरकारी योजना
+                </option>
+
+                <option value="scholarship">
+                    💰 छात्रवृत्ति
+                </option>
+
+                <option value="other">
+                    📄 अन्य आवेदन
+                </option>
+
+            </select>
+
+
+            <input
+                type="text"
+                id="applicationNumber"
+                placeholder="आवेदन संख्या दर्ज करें"
+                style="width:100%; padding:14px; margin-top:15px;
+                border:1px solid #ddd; border-radius:10px;
+                font-size:16px;"
+            >
+
+
+            <button
+                onclick="checkStatus()"
+                style="margin-top:15px;
+                background:#0d6efd;
+                color:white;
+                border:none;
+                border-radius:10px;
+                padding:14px 25px;
+                font-size:16px;
+                cursor:pointer;"
+            >
+                🔎 स्थिति देखें
+            </button>
+
+
+            <div id="result" style="margin-top:20px;"></div>
+
+        </section>
+
+        <br>
+
+        <button onclick="history.back()">
+            ⬅️ वापस जाएँ
+        </button>
+
+    </main>
+
+
+    <script>
+
+        function checkStatus() {
+
+            const service =
+                document.getElementById("serviceType").value;
+
+            const number =
+                document.getElementById("applicationNumber").value.trim();
+
+            const result =
+                document.getElementById("result");
+
+
+            if (service === "") {
+
+                result.innerHTML =
+                    "<p style='color:red;'>⚠️ कृपया पहले सेवा चुनें।</p>";
+
+                return;
+            }
+
+
+            if (number === "") {
+
+                result.innerHTML =
+                    "<p style='color:red;'>⚠️ कृपया आवेदन संख्या दर्ज करें।</p>";
+
+                return;
+            }
+
+
+            const serviceNames = {
+
+                aadhaar: "🪪 आधार आवेदन",
+
+                pan: "💳 PAN Card",
+
+                certificate: "📜 प्रमाण पत्र",
+
+                job: "💼 नौकरी / रोजगार",
+
+                education: "🎓 शिक्षा / प्रवेश",
+
+                government: "🏛️ सरकारी योजना",
+
+                scholarship: "💰 छात्रवृत्ति",
+
+                other: "📄 अन्य आवेदन"
+
+            };
+
+
+            result.innerHTML =
+
+                "<div style='background:#f1f8ff;" +
+                "padding:20px;" +
+                "border-radius:10px;'>" +
+
+                "<h3>📋 आवेदन विवरण</h3>" +
+
+                "<p><b>सेवा:</b> " +
+                serviceNames[service] +
+                "</p>" +
+
+                "<p><b>आवेदन संख्या:</b> " +
+                number +
+                "</p>" +
+
+                "<p style='color:#555;'>" +
+                "ℹ️ अभी इस पोर्टल का वास्तविक सर्वर/डेटाबेस " +
+                "कनेक्ट नहीं है।" +
+                "</p>" +
+
+                "</div>";
+
+        }
+
+    </script>
+
+</body>
+
+</html>
