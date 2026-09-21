@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Suvodh Seva Portal</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="portal-header">
+    <h1>Suvodh Seva Portal</h1>
+    <p>सभी ऑनलाइन सेवाएँ एक ही स्थान पर</p>
+</header>
+
+<main class="container">
+
+    <div class="section-title">
+        <h2>सेवा चुनें</h2>
+    </div>
+
+    <div class="service-grid">
+
+        <a href="./aadhaar.html" class="service-btn">
+    आधार सेवा
+        </a>
+
+        <a href="./pan.html" class="service-btn">
+    PAN कार्ड सेवा
+        </a>
+
+        <a href="./certificate.html" class="service-btn">
+    प्रमाण पत्र
+        </a>
+
+        <a href="./other-certificate.html" class="service-btn">
+    अन्य प्रमाण पत्र
+        </a>
+
+        <a href="./aeps-banking.html" class="service-btn">
+    AEPS / बैंकिंग
+        </a>
+
+        <a href="./bill-payment.html" class="service-btn">
+    बिल भुगतान
+        </a>
+
+  <a href="./recharge.html" class="service-btn">
+    मोबाइल / DTH रिचार्ज
+  </a>
+
+        <a href="./education.html" class="service-btn">
+    शिक्षा सेवाएँ
+        </a>
+
+        <a href="./job.html" class="service-btn">
+    नौकरी / रोजगार
+        </a>
+
+        <a href="./government.html" class="service-btn">
+    सरकारी योजनाएँ
+        </a>
+      <a href="./e-district.html" class="service-btn">
+    e-District सेवाएँ
+      </a>
+
+      <a href="any-seva.html" class="service-card">
+    <span>🛠️</span>
+    <b>अन्य सेवाएं</b>
+    <small>अन्य ऑनलाइन एवं जन सेवा</small>
+      </a>
+
+    </div>
+
+</main>
+
+<footer class="portal-footer">
+
+    <p>
+        © 2026-2007 Suvodh Seva Portal
+    </p>
+
+    <p>
+        📱 मोबाइल:
+        <a href="tel:8273795826">8273795826</a> |
+        <a href="tel:9027828374">9027828374</a>
+    </p>
+
+    <p>
+        📧 Gmail:
+        <a href="mailto:kumarsuvodh610@gmail.com">
+            kumarsuvodh610@gmail.com
+        </a>
+    </p>
+
+    <p>
+        भविष्य में इस पोर्टल पर और भी नई सेवाएँ जोड़ी जाएँगी।
+    </p>
+
+    <p>
+        इस पोर्टल पर उपलब्ध सेवाओं का उपयोग करने के लिए
+        कोई अतिरिक्त पोर्टल शुल्क नहीं लिया जाएगा।
+    </p>
+
+    <p>
+        पोर्टल का उपयोग करते समय किसी प्रकार की समस्या होने पर
+        आप सीधे WhatsApp संदेश या Email के माध्यम से संपर्क कर सकते हैं।
+    </p>
+
+    <hr>
+
+    <p>
+        <b>Terms & Conditions:</b><br>
+        इस पोर्टल का उपयोग सामान्य जानकारी और ऑनलाइन सेवाओं
+        तक पहुँच की सुविधा के लिए किया जाता है। संबंधित सेवा की
+        अंतिम प्रक्रिया, शुल्क और नियम संबंधित विभाग या आधिकारिक
+        वेबसाइट के अनुसार होंगे।
+    </p>
+
+    <p>
+        <b>Privacy:</b><br>
+        अपनी व्यक्तिगत जानकारी केवल आवश्यकता होने पर और
+        विश्वसनीय आधिकारिक वेबसाइट पर ही दर्ज करें। OTP, PIN,
+        Password या बैंक संबंधी गोपनीय जानकारी किसी के साथ साझा न करें।
+    </p>
+
+    <p>
+        <b>Disclaimer:</b><br>
+        Suvodh Seva Portal किसी सरकारी विभाग की आधिकारिक वेबसाइट नहीं है।
+        सरकारी सेवाओं के लिए संबंधित विभाग की आधिकारिक वेबसाइट को
+        प्राथमिकता दें।
+    </p>
+
+    <hr>
+
+    <p>
+        <b>© 2026 Suvodh Seva Portal. All Rights Reserved.</b>
+    </p>
+
+    <p>
+        इस पोर्टल का नाम, डिजाइन, लोगो, सामग्री और स्वयं द्वारा तैयार
+        की गई वेबसाइट संरचना की अनधिकृत नकल या पुनःप्रकाशन न करें।
+    </p>
+
+    <p>
+        Version 2026.2007
+    </p>
+
+</footer>
+
+
+<!-- Service Popup -->
+<div id="serviceBox" class="service-box">
+
+    <div class="service-content">
+
+        <button class="close-btn" onclick="closeService()">×</button>
+
+        <h2 id="serviceTitle"></h2>
+
+        <p>
+            इस सेवा का पेज जल्द ही तैयार किया जाएगा।
+        </p>
+
+        <button class="back-service" onclick="closeService()">
+            वापस जाएँ
+        </button>
+
+    </div>
+
+</div>
+
+
+<script>
+
+function openService(serviceName) {
+
+    document.getElementById("serviceTitle").innerText = serviceName;
+
+    document.getElementById("serviceBox").style.display = "flex";
+}
+
+function closeService() {
+
+    document.getElementById("serviceBox").style.display = "none";
+}
+
+</script>
+
+</body>
+</html>file:///data/user/0/com.foxdebug.acodefree/files/public/Index.html
